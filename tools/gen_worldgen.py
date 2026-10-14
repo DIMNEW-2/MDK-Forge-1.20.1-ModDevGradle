@@ -107,6 +107,10 @@ def dmax(a, b):
 
 
 def clamp(x, lo, hi):
+    """clamp(x) - ``minecraft:clamp`` decodes ``input`` with DensityFunction.DIRECT_CODEC, which only accepts an inline
+    function object or a number (no registry references), so references are clamped with min/max instead."""
+    if isinstance(x, str):
+        return dmin(dmax(x, lo), hi)
     return {"type": "minecraft:clamp", "input": x, "min": lo, "max": hi}
 
 
@@ -165,188 +169,14 @@ def block(name, props=None):
     return b
 
 
-def rule_block(name, props=None):
-    return {"type": "minecraft:block", "result_state": block(name, props)}
-
-
-def cond(if_true, then_run):
-    return {"type": "minecraft:condition", "if_true": if_true, "then_run": then_run}
-
-
-def seq(*rules):
-    return {"type": "minecraft:sequence", "sequence": list(rules)}
-
-
-def biome_is(*biomes):
-    return {"type": "minecraft:biome", "biome_is": list(biomes)}
-
-
-def stone_depth(offset, add_surface_depth, surface_type, secondary=0):
-    return {"type": "minecraft:stone_depth", "offset": offset, "surface_type": surface_type,
-            "add_surface_depth": add_surface_depth, "secondary_depth_range": secondary}
-
-
-def water(offset, multiplier=0, add_stone_depth=False):
-    return {"type": "minecraft:water", "offset": offset, "surface_depth_multiplier": multiplier, "add_stone_depth": add_stone_depth}
-
-
-def y_above(y, multiplier=0, add_stone_depth=False):
-    return {"type": "minecraft:y_above", "anchor": {"absolute": y}, "surface_depth_multiplier": multiplier, "add_stone_depth": add_stone_depth}
-
-
-def noise_threshold(noise, lo, hi):
-    return {"type": "minecraft:noise_threshold", "noise": noise, "min_threshold": lo, "max_threshold": hi}
-
-
-def not_(c):
-    return {"type": "minecraft:not", "invert": c}
-
-
-ON_FLOOR = stone_depth(0, False, "floor")
-UNDER_FLOOR = stone_depth(0, True, "floor")
-DEEP_UNDER_FLOOR = stone_depth(0, True, "floor", 6)
-VERY_DEEP_UNDER_FLOOR = stone_depth(0, True, "floor", 30)
-UNDER_CEILING = stone_depth(0, True, "ceiling")
-ABOVE_WATER = water(-1, 0, False)
-WATER_START = water(-6, -1, True)
-STEEP = {"type": "minecraft:steep"}
-HOLE = {"type": "minecraft:hole"}
-FREEZING = {"type": "minecraft:temperature"}
-
-PEAKS = ["minecraft:frozen_peaks", "minecraft:jagged_peaks"]
-STONY = ["minecraft:stony_peaks", "minecraft:stony_shore"]
-SANDY = ["minecraft:desert", "minecraft:beach", "minecraft:snowy_beach", "minecraft:warm_ocean"]
-BADLANDS = ["minecraft:badlands", "minecraft:eroded_badlands", "minecraft:wooded_badlands"]
-WARM_OCEANS = ["minecraft:warm_ocean", "minecraft:lukewarm_ocean", "minecraft:deep_lukewarm_ocean"]
-FROZEN_OCEANS = ["minecraft:frozen_ocean", "minecraft:deep_frozen_ocean"]
-
-
 def surface_rule():
-    grass = rule_block("minecraft:grass_block", {"snowy": "false"})
-    dirt = rule_block("minecraft:dirt")
-    stone = rule_block("minecraft:stone")
-    sand = rule_block("minecraft:sand")
-    red_sand = rule_block("minecraft:red_sand")
-    sandstone = rule_block("minecraft:sandstone")
-    gravel = rule_block("minecraft:gravel")
-    snow_block = rule_block("minecraft:snow_block")
-    packed_ice = rule_block("minecraft:packed_ice")
-    ice = rule_block("minecraft:ice")
-    water_block = rule_block("minecraft:water", {"level": "0"})
-    air = rule_block("minecraft:air")
-    mycelium = rule_block("minecraft:mycelium", {"snowy": "false"})
-    mud = rule_block("minecraft:mud")
-    terracotta = rule_block("minecraft:terracotta")
-    orange_terracotta = rule_block("minecraft:orange_terracotta")
-    white_terracotta = rule_block("minecraft:white_terracotta")
-    podzol = rule_block("minecraft:podzol", {"snowy": "false"})
-    coarse_dirt = rule_block("minecraft:coarse_dirt")
-    calcite = rule_block("minecraft:calcite")
-    deepslate = rule_block("minecraft:deepslate", {"axis": "y"})
-    bedrock = rule_block("minecraft:bedrock")
-    bandlands = {"type": "minecraft:bandlands"}
-    powder_snow = cond(noise_threshold("minecraft:powder_snow", 0.45, 0.58), cond(water(0, 0, False), rule_block("minecraft:powder_snow")))
+    """The vanilla 1.20.1 overworld surface rule, verbatim (tools/vanilla/overworld_surface_rule_1.20.1.json).
 
-    def surface_noise_above(v):
-        return noise_threshold("minecraft:surface", v / 8.25, 1000.0)
-
-    # blocks shared by the floor and the layer below it (sand, stone, ...)
-    def shared(top):
-        return seq(
-            cond(biome_is("minecraft:stony_peaks"), seq(cond(noise_threshold("minecraft:calcite", -0.0125, 0.0125), calcite), stone)),
-            cond(biome_is("minecraft:stony_shore"), seq(cond(noise_threshold("minecraft:gravel", -0.05, 0.05), gravel), stone)),
-            cond(biome_is("minecraft:windswept_hills"), cond(surface_noise_above(1.0), stone)),
-            cond(biome_is("minecraft:warm_ocean", "minecraft:beach", "minecraft:snowy_beach"), sand if top else sandstone),
-            cond(biome_is("minecraft:desert"), sand if top else sandstone),
-            cond(biome_is("minecraft:dripstone_caves"), stone),
-        )
-
-    floor_rules = seq(
-        cond(biome_is("minecraft:frozen_peaks"), seq(cond(STEEP, packed_ice), cond(noise_threshold("minecraft:packed_ice", 0.0, 0.2), packed_ice),
-                                                      cond(noise_threshold("minecraft:ice", 0.0, 0.025), ice), cond(ABOVE_WATER, snow_block))),
-        cond(biome_is("minecraft:snowy_slopes"), seq(cond(STEEP, stone), powder_snow, cond(ABOVE_WATER, snow_block))),
-        cond(biome_is("minecraft:jagged_peaks"), seq(cond(STEEP, stone), cond(ABOVE_WATER, snow_block))),
-        cond(biome_is("minecraft:grove"), seq(powder_snow, cond(ABOVE_WATER, snow_block))),
-        shared(True),
-        cond(biome_is("minecraft:windswept_savanna"), seq(cond(surface_noise_above(1.75), stone), cond(surface_noise_above(-0.5), coarse_dirt))),
-        cond(biome_is("minecraft:windswept_gravelly_hills"), seq(cond(surface_noise_above(2.0), gravel), cond(surface_noise_above(1.0), stone),
-                                                                  cond(surface_noise_above(-1.0), grass), gravel)),
-        cond(biome_is("minecraft:old_growth_pine_taiga", "minecraft:old_growth_spruce_taiga"),
-             seq(cond(surface_noise_above(1.75), coarse_dirt), cond(surface_noise_above(-0.95), podzol))),
-        cond(biome_is("minecraft:ice_spikes"), cond(ABOVE_WATER, snow_block)),
-        cond(biome_is("minecraft:mangrove_swamp"), mud),
-        cond(biome_is("minecraft:mushroom_fields"), mycelium),
-        cond(ABOVE_WATER, grass),
-        dirt,
-    )
-
-    under_floor_rules = seq(
-        cond(biome_is("minecraft:frozen_peaks"), seq(cond(STEEP, packed_ice), cond(noise_threshold("minecraft:packed_ice", -0.5, 0.2), packed_ice),
-                                                      cond(noise_threshold("minecraft:ice", -0.0625, 0.025), ice), cond(ABOVE_WATER, snow_block))),
-        cond(biome_is("minecraft:snowy_slopes"), seq(cond(STEEP, stone), powder_snow, cond(ABOVE_WATER, snow_block))),
-        cond(biome_is("minecraft:jagged_peaks"), seq(cond(STEEP, stone), cond(ABOVE_WATER, snow_block))),
-        cond(biome_is("minecraft:grove"), seq(powder_snow, dirt)),
-        shared(False),
-        cond(biome_is("minecraft:windswept_savanna"), cond(surface_noise_above(1.75), stone)),
-        cond(biome_is("minecraft:windswept_gravelly_hills"), seq(cond(surface_noise_above(2.0), gravel), cond(surface_noise_above(1.0), stone),
-                                                                  cond(surface_noise_above(-1.0), dirt), gravel)),
-        cond(biome_is("minecraft:mangrove_swamp"), mud),
-        dirt,
-    )
-
-    badlands = cond(biome_is(*BADLANDS), seq(
-        cond(ON_FLOOR, seq(
-            cond(y_above(256, 0, False), orange_terracotta),
-            cond(y_above(74, 1, True), seq(
-                cond(noise_threshold("minecraft:surface", -0.909, -0.5454), terracotta),
-                cond(noise_threshold("minecraft:surface", -0.1818, 0.1818), terracotta),
-                cond(noise_threshold("minecraft:surface", 0.5454, 0.909), terracotta),
-                bandlands)),
-            cond(ABOVE_WATER, seq(cond(stone_depth(0, False, "ceiling"), rule_block("minecraft:red_sandstone")), red_sand)),
-            cond(not_(HOLE), orange_terracotta),
-            cond(WATER_START, white_terracotta),
-            gravel)),
-        cond(y_above(63, -1, True), seq(cond(y_above(63, 0, False), cond(not_(y_above(64, 0, False)), bandlands)), cond(UNDER_FLOOR, orange_terracotta))),
-        cond(UNDER_FLOOR, seq(cond(y_above(97, 2, False), bandlands), cond(not_(y_above(63, 0, False)), white_terracotta), orange_terracotta)),
-    ))
-
-    swamp_water = cond(ON_FLOOR, seq(
-        cond(biome_is("minecraft:wooded_badlands"), cond(y_above(97, 2, False), seq(
-            cond(noise_threshold("minecraft:surface", -0.909, -0.5454), coarse_dirt),
-            cond(noise_threshold("minecraft:surface", -0.1818, 0.1818), coarse_dirt),
-            cond(noise_threshold("minecraft:surface", 0.5454, 0.909), coarse_dirt),
-            cond(ABOVE_WATER, grass), dirt))),
-        cond(biome_is("minecraft:swamp"), cond(y_above(62, 0, False), cond(not_(y_above(63, 0, False)), cond(noise_threshold("minecraft:swamp", 0.0, 1000.0), water_block)))),
-        cond(biome_is("minecraft:mangrove_swamp"), cond(y_above(60, 0, False), cond(not_(y_above(63, 0, False)), cond(noise_threshold("minecraft:swamp", 0.0, 1000.0), water_block)))),
-    ))
-
-    above_surface = seq(
-        swamp_water,
-        badlands,
-        cond(ON_FLOOR, cond(ABOVE_WATER, seq(
-            cond(biome_is(*FROZEN_OCEANS), cond(HOLE, seq(cond(water(0, 0, False), air), cond(FREEZING, ice), water_block))),
-            floor_rules))),
-        cond(WATER_START, seq(
-            cond(ON_FLOOR, cond(biome_is(*FROZEN_OCEANS), cond(HOLE, water_block))),
-            cond(UNDER_FLOOR, under_floor_rules),
-            cond(biome_is("minecraft:warm_ocean", "minecraft:beach", "minecraft:snowy_beach"), cond(DEEP_UNDER_FLOOR, sandstone)),
-            cond(biome_is("minecraft:desert"), cond(VERY_DEEP_UNDER_FLOOR, sandstone)))),
-        cond(ON_FLOOR, seq(
-            cond(biome_is(*PEAKS), stone),
-            cond(biome_is(*WARM_OCEANS), seq(cond(stone_depth(0, False, "ceiling"), sandstone), sand)),
-            gravel)),
-        cond(UNDER_CEILING, seq(
-            cond(biome_is("minecraft:desert", "minecraft:beach", "minecraft:snowy_beach", "minecraft:warm_ocean"), sandstone),
-            cond(biome_is(*BADLANDS), terracotta))),
-    )
-
-    return seq(
-        cond({"type": "minecraft:vertical_gradient", "random_name": "minecraft:bedrock_floor",
-              "true_at_and_below": {"above_bottom": 0}, "false_at_and_above": {"above_bottom": 5}}, bedrock),
-        cond({"type": "minecraft:above_preliminary_surface"}, above_surface),
-        cond({"type": "minecraft:vertical_gradient", "random_name": "minecraft:deepslate",
-              "true_at_and_below": {"absolute": 0}, "false_at_and_above": {"absolute": 8}}, deepslate),
-    )
+    The mod changes the terrain shape (noise router / density functions) but not the surface materials, and the rule
+    references vanilla noises by id (``minecraft:surface_swamp`` etc.), so copying it is both simpler and safer than
+    rebuilding it by hand."""
+    with open(os.path.join(os.path.dirname(__file__), "vanilla", "overworld_surface_rule_1.20.1.json"), encoding="utf-8") as fh:
+        return json.load(fh)
 
 
 def noise_router():

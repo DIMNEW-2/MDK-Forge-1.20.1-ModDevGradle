@@ -14,7 +14,7 @@
 |---|---|
 | **Оружие и лут** | Уровень предмета, `WeaponClass`, `WeaponMaterial`, случайные бонусы в NBT, динамические тултипы, редкость. Оружие не крафтится (ванильные рецепты лука/арбалета/мечей отключены условием `rpgmod:config`, пока `lootOnlyFromChests=true`), добывается из сундуков и боссов. Ковка в кузнечном столе: шаблон + оружие + материал → бонус материала. |
 | **7 тиров × 5 классов оружия** | Мечи (рывок), булавы (оглушение, AoE‑удар), копья (дальность 4.5, бросок с подбором), луки (тройной выстрел, кадры натяжения), арбалеты (болты, веер из трёх), бомбы 6 типов (без разрушения блоков по умолчанию), стрелы 7 эффектов и болты 6 эффектов — собственные сущности снарядов. |
-| **Генерация мира** | Overworld высотой −64…640 (`dimension_type`), `noise_settings` с усиленными горами, увеличенными континентами и климатическими зонами, переопределённые density‑функции `depth/continents/erosion`, ванильные данжи/шахты/храмы/особняки отключены пустыми `structure_set`, monster rooms убраны biome‑модификатором. |
+| **Генерация мира** | Overworld высотой −64…640 (`dimension_type`), `noise_settings` с усиленными горами, увеличенными континентами и климатическими зонами, переопределённые density‑функции `depth/continents/erosion` (surface rule — ванильный, скопирован дословно), ванильные данжи/шахты/храмы/особняки отключены пустыми `structure_set`, monster rooms убраны biome‑модификатором. |
 | **8 подземелий** | Jigsaw‑структуры `rpgmod:dungeon` с процедурно сгенерированными NBT‑шаблонами (56 частей), боссами, алтарями, таблицами лута. Подробнее — [`docs/dungeons.md`](docs/dungeons.md). Команды `/rpgmod dungeon export|import|list|generate|generate_templates`. |
 | **Боссы** | 8 боссов (ванильные мобы с усилением, босс‑бар, титул, лут `bosses/<key>`, опыт группе). |
 | **Сундуки‑казино** | `LootChestBlock` трёх тиров; сервер один раз бросает лут, клиент крутит барабаны (`CasinoScreen`), «Забрать» — пакет на сервер, сундук исчезает. Джекпот, уровень зоны, защита от повторного открытия. |
@@ -51,12 +51,13 @@
 | `tools/gen_templates.py` | 56 NBT‑шаблонов подземелий (через `tools/nbtlite.py`), тот же алгоритм, что и Java‑команда `generate_templates`. |
 | `tools/validate_data.py` | Перекрёстная проверка данных: все ссылки на предметы/блоки/модели/текстуры/шаблоны/пулы/ключи локализации. |
 | `tools/check_java.py` | Синтаксис (tree‑sitter) + резолв статических и инстанс‑обращений к классам мода. |
+| `tools/validate_worldgen.py` | Проверка worldgen‑данных по кодекам Minecraft 1.20.1 без запуска игры: density‑функции (какие аргументы принимают ссылки, диапазоны), `noise_settings`/`dimension_type` (кратность 16, лимиты высоты), структуры/structure_set/пулы, NBT‑шаблоны (палитры, jigsaw, спавнеры, сундуки) и все `minecraft:`‑идентификаторы в данных — по справочнику `tools/vanilla/registries_1.20.1.json` (извлечён из misode/mcmeta). |
 | `tools/flow_scan.py` | Эвристический поиск ошибок фазы Flow javac (захват не‑effectively‑final локальных переменных в лямбдах, недостижимый код, отсутствующий `return`, непойманные checked‑исключения). |
 
 ```bash
 pip install pillow tree-sitter tree-sitter-java
 python3 tools/gen_textures.py && python3 tools/gen_resources.py && python3 tools/gen_worldgen.py && python3 tools/gen_templates.py
-python3 tools/validate_data.py && python3 tools/check_java.py && python3 tools/flow_scan.py
+python3 tools/validate_data.py && python3 tools/validate_worldgen.py && python3 tools/check_java.py && python3 tools/flow_scan.py
 ```
 
 ## Конфигурация

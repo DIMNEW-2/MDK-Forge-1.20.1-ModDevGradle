@@ -50,6 +50,8 @@ NBT‑шаблонов (`data/rpgmod/structures/<id>/*.nbt`), пулы шабл�
 наземные — `project_start_to_heightmap: WORLD_SURFACE_WG`, `terrain_adaptation: beard_thin`.
 Размещение: `random_spread` с индивидуальными `spacing/separation/salt` (см. `tools/gen_worldgen.py`).
 
+Все worldgen‑данные проверяются скриптом `tools/validate_worldgen.py`, который повторяет проверки кодеков 1.20.1 (например, `minecraft:clamp` принимает в `input` только встроенный объект или число — ссылка на density‑функцию там роняет загрузку реестров) и сверяет каждый `minecraft:`‑идентификатор со справочником ванильных реестров.
+
 Палитры блоков, мобы спавнеров, освещение и декор заданы в `DungeonRegistry.java` (Java) и продублированы в
 `tools/gen_templates.py` (Python) — именно Python‑генератор создал NBT, лежащие в репозитории.
 
