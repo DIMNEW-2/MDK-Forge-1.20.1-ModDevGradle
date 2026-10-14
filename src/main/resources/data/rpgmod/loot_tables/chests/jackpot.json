@@ -1,0 +1,225 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:sword_diamond_rpg",
+          "weight": 4,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 5,
+              "offset_max": 8
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:mace_diamond_rpg",
+          "weight": 4,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 5,
+              "offset_max": 8
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:spear_diamond_rpg",
+          "weight": 4,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 5,
+              "offset_max": 8
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:bow_diamond_rpg",
+          "weight": 4,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 5,
+              "offset_max": 8
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:crossbow_diamond_rpg",
+          "weight": 4,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 5,
+              "offset_max": 8
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:sword_netherite_rpg",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 5,
+              "offset_max": 8
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:mace_netherite_rpg",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 5,
+              "offset_max": 8
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:spear_netherite_rpg",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 5,
+              "offset_max": 8
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:bow_netherite_rpg",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 5,
+              "offset_max": 8
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:crossbow_netherite_rpg",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 5,
+              "offset_max": 8
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:sword_rune_rpg",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 5,
+              "offset_max": 8
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:mace_rune_rpg",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 5,
+              "offset_max": 8
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:spear_rune_rpg",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 5,
+              "offset_max": 8
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:bow_rune_rpg",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 5,
+              "offset_max": 8
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:crossbow_rune_rpg",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 5,
+              "offset_max": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 3,
+                "max": 6
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:emerald_block",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_golden_apple",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:netherite_ingot",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

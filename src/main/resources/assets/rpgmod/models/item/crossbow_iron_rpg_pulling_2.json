@@ -1,0 +1,6 @@
+{
+  "parent": "rpgmod:item/crossbow_iron_rpg",
+  "textures": {
+    "layer0": "rpgmod:item/crossbow_iron_rpg_pulling_2"
+  }
+}

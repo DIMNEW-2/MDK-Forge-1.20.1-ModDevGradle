@@ -1,0 +1,17 @@
+{
+  "branch": "lightning",
+  "x": 16,
+  "y": 2,
+  "cost": 2,
+  "required_level": 8,
+  "parents": [
+    "rpgmod:lightning/blink"
+  ],
+  "icon": "minecraft:redstone",
+  "effects": [
+    {
+      "type": "unlock_spell",
+      "spell": "rpgmod:static_charge"
+    }
+  ]
+}

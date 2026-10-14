@@ -1,0 +1,19 @@
+{
+  "branch": "combat",
+  "x": 1,
+  "y": 3,
+  "cost": 3,
+  "required_level": 18,
+  "parents": [
+    "rpgmod:combat/critical_eye"
+  ],
+  "icon": "minecraft:blaze_powder",
+  "effects": [
+    {
+      "type": "attribute",
+      "attribute": "minecraft:generic.attack_damage",
+      "amount": 0.1,
+      "operation": "multiply_total"
+    }
+  ]
+}

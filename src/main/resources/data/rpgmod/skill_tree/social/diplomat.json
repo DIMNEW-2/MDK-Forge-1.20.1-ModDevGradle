@@ -1,0 +1,17 @@
+{
+  "branch": "social",
+  "x": 8,
+  "y": 1,
+  "cost": 2,
+  "required_level": 6,
+  "parents": [
+    "rpgmod:social/friendly_face"
+  ],
+  "icon": "minecraft:writable_book",
+  "effects": [
+    {
+      "type": "flag",
+      "flag": "diplomat"
+    }
+  ]
+}

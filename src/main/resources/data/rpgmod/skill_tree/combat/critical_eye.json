@@ -1,0 +1,19 @@
+{
+  "branch": "combat",
+  "x": 1,
+  "y": 2,
+  "cost": 1,
+  "required_level": 8,
+  "parents": [
+    "rpgmod:combat/swift_strikes"
+  ],
+  "icon": "minecraft:spyglass",
+  "effects": [
+    {
+      "type": "attribute",
+      "attribute": "rpgmod:crit_chance",
+      "amount": 0.05,
+      "operation": "addition"
+    }
+  ]
+}

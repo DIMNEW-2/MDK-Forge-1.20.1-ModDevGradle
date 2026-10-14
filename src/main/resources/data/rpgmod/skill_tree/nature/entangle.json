@@ -1,0 +1,17 @@
+{
+  "branch": "nature",
+  "x": 18,
+  "y": 1,
+  "cost": 2,
+  "required_level": 4,
+  "parents": [
+    "rpgmod:nature/green_thumb"
+  ],
+  "icon": "minecraft:vine",
+  "effects": [
+    {
+      "type": "unlock_spell",
+      "spell": "rpgmod:entangle"
+    }
+  ]
+}

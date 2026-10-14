@@ -1,0 +1,17 @@
+{
+  "branch": "lightning",
+  "x": 15,
+  "y": 2,
+  "cost": 3,
+  "required_level": 10,
+  "parents": [
+    "rpgmod:lightning/lightning_bolt"
+  ],
+  "icon": "minecraft:chain",
+  "effects": [
+    {
+      "type": "unlock_spell",
+      "spell": "rpgmod:chain_lightning"
+    }
+  ]
+}

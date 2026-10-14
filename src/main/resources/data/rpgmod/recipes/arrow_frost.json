@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "AXA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "rpgmod:arrow_basic"
+    },
+    "X": {
+      "item": "minecraft:snowball"
+    }
+  },
+  "result": {
+    "item": "rpgmod:arrow_frost",
+    "count": 8
+  }
+}

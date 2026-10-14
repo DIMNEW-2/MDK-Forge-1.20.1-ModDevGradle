@@ -1,0 +1,17 @@
+{
+  "branch": "exploration",
+  "x": 6,
+  "y": 0,
+  "cost": 1,
+  "required_level": 2,
+  "parents": [],
+  "icon": "minecraft:leather_boots",
+  "effects": [
+    {
+      "type": "attribute",
+      "attribute": "minecraft:generic.movement_speed",
+      "amount": 0.05,
+      "operation": "multiply_base"
+    }
+  ]
+}

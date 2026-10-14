@@ -1,0 +1,19 @@
+{
+  "branch": "defense",
+  "x": 2,
+  "y": 3,
+  "cost": 3,
+  "required_level": 20,
+  "parents": [
+    "rpgmod:defense/iron_will"
+  ],
+  "icon": "minecraft:netherite_chestplate",
+  "effects": [
+    {
+      "type": "attribute",
+      "attribute": "minecraft:generic.max_health",
+      "amount": 4,
+      "operation": "addition"
+    }
+  ]
+}

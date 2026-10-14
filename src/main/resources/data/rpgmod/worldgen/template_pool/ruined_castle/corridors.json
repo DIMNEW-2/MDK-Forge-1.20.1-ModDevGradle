@@ -1,0 +1,14 @@
+{
+  "fallback": "rpgmod:ruined_castle/ends",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "rpgmod:ruined_castle/corridor",
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "branch": "exploration",
+  "x": 6,
+  "y": 2,
+  "cost": 2,
+  "required_level": 10,
+  "parents": [
+    "rpgmod:exploration/lucky_finder"
+  ],
+  "icon": "minecraft:chest",
+  "effects": [
+    {
+      "type": "attribute",
+      "attribute": "minecraft:generic.luck",
+      "amount": 1,
+      "operation": "addition"
+    }
+  ]
+}

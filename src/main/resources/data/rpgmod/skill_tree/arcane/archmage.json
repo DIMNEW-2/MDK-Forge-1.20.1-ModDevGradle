@@ -1,0 +1,25 @@
+{
+  "branch": "arcane",
+  "x": 19,
+  "y": 2,
+  "cost": 3,
+  "required_level": 16,
+  "parents": [
+    "rpgmod:arcane/meditation",
+    "rpgmod:arcane/arcane_power"
+  ],
+  "icon": "minecraft:nether_star",
+  "effects": [
+    {
+      "type": "attribute",
+      "attribute": "rpgmod:magic_power",
+      "amount": 0.2,
+      "operation": "addition"
+    },
+    {
+      "type": "mana_cost",
+      "amount": 0.1
+    }
+  ],
+  "required_class": "mage"
+}

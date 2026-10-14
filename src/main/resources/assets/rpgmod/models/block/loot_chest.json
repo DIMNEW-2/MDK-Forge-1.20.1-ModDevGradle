@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "rpgmod:block/loot_chest_common_top",
+    "front": "rpgmod:block/loot_chest_common_front",
+    "side": "rpgmod:block/loot_chest_common_side"
+  }
+}

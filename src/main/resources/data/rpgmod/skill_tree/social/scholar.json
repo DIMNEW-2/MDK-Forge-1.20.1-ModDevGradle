@@ -1,0 +1,19 @@
+{
+  "branch": "social",
+  "x": 9,
+  "y": 2,
+  "cost": 1,
+  "required_level": 12,
+  "parents": [
+    "rpgmod:social/mana_affinity"
+  ],
+  "icon": "minecraft:enchanted_book",
+  "effects": [
+    {
+      "type": "attribute",
+      "attribute": "rpgmod:mana_regen",
+      "amount": 1,
+      "operation": "addition"
+    }
+  ]
+}

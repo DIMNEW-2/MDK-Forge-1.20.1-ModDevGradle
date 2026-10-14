@@ -1,0 +1,19 @@
+{
+  "branch": "defense",
+  "x": 3,
+  "y": 3,
+  "cost": 1,
+  "required_level": 14,
+  "parents": [
+    "rpgmod:defense/toughness"
+  ],
+  "icon": "minecraft:anvil",
+  "effects": [
+    {
+      "type": "attribute",
+      "attribute": "minecraft:generic.knockback_resistance",
+      "amount": 0.1,
+      "operation": "addition"
+    }
+  ]
+}

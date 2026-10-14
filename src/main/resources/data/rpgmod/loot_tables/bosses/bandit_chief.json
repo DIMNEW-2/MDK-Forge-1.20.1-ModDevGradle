@@ -1,0 +1,359 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:sword_stone_rpg",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 3,
+              "offset_max": 6
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:mace_stone_rpg",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 3,
+              "offset_max": 6
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:spear_stone_rpg",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 3,
+              "offset_max": 6
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:bow_stone_rpg",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 3,
+              "offset_max": 6
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:crossbow_stone_rpg",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 3,
+              "offset_max": 6
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:sword_iron_rpg",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 3,
+              "offset_max": 6
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:mace_iron_rpg",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 3,
+              "offset_max": 6
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:spear_iron_rpg",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 3,
+              "offset_max": 6
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:bow_iron_rpg",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 3,
+              "offset_max": 6
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:crossbow_iron_rpg",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 3,
+              "offset_max": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:warrior_helmet",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:warrior_chestplate",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:warrior_leggings",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:warrior_boots",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:mage_helmet",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:mage_chestplate",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:mage_leggings",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:mage_boots",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:archer_helmet",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:archer_chestplate",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:archer_leggings",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:archer_boots",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:crossbowman_helmet",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:crossbowman_chestplate",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:crossbowman_leggings",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:crossbowman_boots",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:rogue_helmet",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:rogue_chestplate",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:rogue_leggings",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:rogue_boots",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:druid_helmet",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:druid_chestplate",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:druid_leggings",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:druid_boots",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:spearman_helmet",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:spearman_chestplate",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:spearman_leggings",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:spearman_boots",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:bomber_helmet",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:bomber_chestplate",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:bomber_leggings",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:bomber_boots",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 1,
+        "max": 2
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:emerald",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 4,
+                "max": 9
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:mana_potion",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:skill_book",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:forging_template",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}

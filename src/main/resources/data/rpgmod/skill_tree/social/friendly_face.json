@@ -1,0 +1,17 @@
+{
+  "branch": "social",
+  "x": 8,
+  "y": 0,
+  "cost": 1,
+  "required_level": 2,
+  "parents": [],
+  "icon": "minecraft:cake",
+  "effects": [
+    {
+      "type": "attribute",
+      "attribute": "minecraft:generic.luck",
+      "amount": 1,
+      "operation": "addition"
+    }
+  ]
+}

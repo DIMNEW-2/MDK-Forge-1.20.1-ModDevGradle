@@ -1,0 +1,19 @@
+{
+  "branch": "social",
+  "x": 9,
+  "y": 1,
+  "cost": 1,
+  "required_level": 8,
+  "parents": [
+    "rpgmod:social/friendly_face"
+  ],
+  "icon": "minecraft:lapis_lazuli",
+  "effects": [
+    {
+      "type": "attribute",
+      "attribute": "rpgmod:max_mana",
+      "amount": 10,
+      "operation": "addition"
+    }
+  ]
+}

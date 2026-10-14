@@ -1,0 +1,19 @@
+{
+  "branch": "defense",
+  "x": 3,
+  "y": 1,
+  "cost": 1,
+  "required_level": 6,
+  "parents": [
+    "rpgmod:defense/vitality_1"
+  ],
+  "icon": "minecraft:leather_chestplate",
+  "effects": [
+    {
+      "type": "attribute",
+      "attribute": "minecraft:generic.armor",
+      "amount": 1,
+      "operation": "addition"
+    }
+  ]
+}

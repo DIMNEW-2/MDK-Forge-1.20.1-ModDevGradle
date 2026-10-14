@@ -1,0 +1,19 @@
+{
+  "branch": "exploration",
+  "x": 6,
+  "y": 1,
+  "cost": 1,
+  "required_level": 5,
+  "parents": [
+    "rpgmod:exploration/fleet_foot"
+  ],
+  "icon": "minecraft:emerald",
+  "effects": [
+    {
+      "type": "attribute",
+      "attribute": "minecraft:generic.luck",
+      "amount": 1,
+      "operation": "addition"
+    }
+  ]
+}

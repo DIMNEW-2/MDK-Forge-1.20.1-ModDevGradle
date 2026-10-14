@@ -1,0 +1,17 @@
+{
+  "branch": "frost",
+  "x": 13,
+  "y": 2,
+  "cost": 3,
+  "required_level": 12,
+  "parents": [
+    "rpgmod:frost/frost_nova"
+  ],
+  "icon": "minecraft:powder_snow_bucket",
+  "effects": [
+    {
+      "type": "unlock_spell",
+      "spell": "rpgmod:blizzard"
+    }
+  ]
+}

@@ -1,0 +1,704 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 2,
+        "max": 3
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:emerald",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 4
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bread",
+          "weight": 6,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:golden_apple",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:arrow",
+          "weight": 6,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 4,
+                "max": 12
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:mana_potion",
+          "weight": 4,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:arrow_fire",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 4,
+                "max": 8
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:arrow_frost",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 4,
+                "max": 8
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:arrow_poison",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 4,
+                "max": 8
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:bolt_basic",
+          "weight": 4,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 6,
+                "max": 12
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:bolt_fire",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 4,
+                "max": 8
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:bomb_basic",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:bomb_fire",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:bomb_smoke",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_ingot",
+          "weight": 4,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:gold_ingot",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:lapis_lazuli",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 5
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:sword_stone_rpg",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 1,
+              "offset_max": 4
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:mace_stone_rpg",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 1,
+              "offset_max": 4
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:spear_stone_rpg",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 1,
+              "offset_max": 4
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:bow_stone_rpg",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 1,
+              "offset_max": 4
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:crossbow_stone_rpg",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 1,
+              "offset_max": 4
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:sword_iron_rpg",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 1,
+              "offset_max": 4
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:mace_iron_rpg",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 1,
+              "offset_max": 4
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:spear_iron_rpg",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 1,
+              "offset_max": 4
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:bow_iron_rpg",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 1,
+              "offset_max": 4
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:crossbow_iron_rpg",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 1,
+              "offset_max": 4
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:sword_gold_rpg",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 1,
+              "offset_max": 4
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:mace_gold_rpg",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 1,
+              "offset_max": 4
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:spear_gold_rpg",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 1,
+              "offset_max": 4
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:bow_gold_rpg",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 1,
+              "offset_max": 4
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:crossbow_gold_rpg",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 1,
+              "offset_max": 4
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:sword_diamond_rpg",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 1,
+              "offset_max": 4
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:mace_diamond_rpg",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 1,
+              "offset_max": 4
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:spear_diamond_rpg",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 1,
+              "offset_max": 4
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:bow_diamond_rpg",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 1,
+              "offset_max": 4
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:crossbow_diamond_rpg",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 1,
+              "offset_max": 4
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:warrior_helmet",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:warrior_chestplate",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:warrior_leggings",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:warrior_boots",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:mage_helmet",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:mage_chestplate",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:mage_leggings",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:mage_boots",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:archer_helmet",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:archer_chestplate",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:archer_leggings",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:archer_boots",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:crossbowman_helmet",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:crossbowman_chestplate",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:crossbowman_leggings",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:crossbowman_boots",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:rogue_helmet",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:rogue_chestplate",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:rogue_leggings",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:rogue_boots",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:druid_helmet",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:druid_chestplate",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:druid_leggings",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:druid_boots",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:spearman_helmet",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:spearman_chestplate",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:spearman_leggings",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:spearman_boots",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:bomber_helmet",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:bomber_chestplate",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:bomber_leggings",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:bomber_boots",
+          "weight": 2
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:air",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:forging_template",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:staff_fire",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:staff_frost",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:staff_lightning",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:staff_nature",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:scroll_fire",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:scroll_frost",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:scroll_lightning",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:scroll_nature",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}

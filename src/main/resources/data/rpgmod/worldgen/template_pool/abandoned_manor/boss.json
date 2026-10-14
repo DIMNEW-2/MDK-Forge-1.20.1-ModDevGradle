@@ -1,0 +1,14 @@
+{
+  "fallback": "rpgmod:abandoned_manor/ends",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "rpgmod:abandoned_manor/boss_room",
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      }
+    }
+  ]
+}

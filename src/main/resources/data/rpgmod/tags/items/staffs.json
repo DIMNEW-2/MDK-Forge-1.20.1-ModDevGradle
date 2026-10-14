@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "rpgmod:staff_fire",
+    "rpgmod:staff_frost",
+    "rpgmod:staff_lightning",
+    "rpgmod:staff_nature"
+  ]
+}

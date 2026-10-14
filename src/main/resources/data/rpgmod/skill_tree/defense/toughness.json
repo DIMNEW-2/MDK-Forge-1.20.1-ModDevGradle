@@ -1,0 +1,19 @@
+{
+  "branch": "defense",
+  "x": 3,
+  "y": 2,
+  "cost": 1,
+  "required_level": 9,
+  "parents": [
+    "rpgmod:defense/thick_skin"
+  ],
+  "icon": "minecraft:iron_chestplate",
+  "effects": [
+    {
+      "type": "attribute",
+      "attribute": "minecraft:generic.armor_toughness",
+      "amount": 1,
+      "operation": "addition"
+    }
+  ]
+}

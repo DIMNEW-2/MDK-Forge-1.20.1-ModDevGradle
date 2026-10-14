@@ -1,0 +1,6 @@
+{
+  "mana_cost": 15,
+  "cooldown": 500,
+  "required_level": 8,
+  "basic": false
+}

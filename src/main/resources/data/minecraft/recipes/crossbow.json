@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "~#~",
+    "%X%",
+    " ~ "
+  ],
+  "key": {
+    "~": {
+      "item": "minecraft:stick"
+    },
+    "#": {
+      "item": "minecraft:iron_ingot"
+    },
+    "%": {
+      "item": "minecraft:string"
+    },
+    "X": {
+      "item": "minecraft:tripwire_hook"
+    }
+  },
+  "result": {
+    "item": "minecraft:crossbow"
+  },
+  "conditions": [
+    {
+      "type": "rpgmod:config",
+      "key": "lootOnlyFromChests",
+      "value": false
+    }
+  ]
+}

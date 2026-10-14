@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "rpgmod:loot_chest",
+    "rpgmod:loot_chest_rare",
+    "rpgmod:loot_chest_boss"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X",
+    "X",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "result": {
+    "item": "minecraft:wooden_sword"
+  },
+  "conditions": [
+    {
+      "type": "rpgmod:config",
+      "key": "lootOnlyFromChests",
+      "value": false
+    }
+  ]
+}

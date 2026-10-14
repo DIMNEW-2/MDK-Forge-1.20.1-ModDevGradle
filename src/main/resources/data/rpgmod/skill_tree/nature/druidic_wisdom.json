@@ -1,0 +1,25 @@
+{
+  "branch": "nature",
+  "x": 17,
+  "y": 3,
+  "cost": 3,
+  "required_level": 12,
+  "parents": [
+    "rpgmod:nature/regrowth"
+  ],
+  "icon": "minecraft:azalea",
+  "effects": [
+    {
+      "type": "attribute",
+      "attribute": "rpgmod:healing_power",
+      "amount": 0.2,
+      "operation": "addition"
+    },
+    {
+      "type": "attribute",
+      "attribute": "rpgmod:max_mana",
+      "amount": 10,
+      "operation": "addition"
+    }
+  ]
+}

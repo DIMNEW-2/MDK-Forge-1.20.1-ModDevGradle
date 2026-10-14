@@ -1,0 +1,19 @@
+{
+  "branch": "ranged",
+  "x": 4,
+  "y": 2,
+  "cost": 2,
+  "required_level": 11,
+  "parents": [
+    "rpgmod:ranged/sharpshooter"
+  ],
+  "icon": "minecraft:crossbow",
+  "effects": [
+    {
+      "type": "attribute",
+      "attribute": "rpgmod:armor_penetration",
+      "amount": 0.1,
+      "operation": "addition"
+    }
+  ]
+}

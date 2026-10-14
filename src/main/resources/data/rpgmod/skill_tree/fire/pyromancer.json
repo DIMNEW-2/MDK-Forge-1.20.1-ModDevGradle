@@ -1,0 +1,18 @@
+{
+  "branch": "fire",
+  "x": 12,
+  "y": 2,
+  "cost": 2,
+  "required_level": 14,
+  "parents": [
+    "rpgmod:fire/flame_burst"
+  ],
+  "icon": "minecraft:blaze_rod",
+  "effects": [
+    {
+      "type": "spell_power",
+      "school": "fire",
+      "amount": 0.1
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:air",
+          "weight": 6
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:forging_template",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:mana_potion",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:scroll_fire",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:scroll_nature",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:sword_stone_rpg",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 0,
+              "offset_max": 2
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:mace_stone_rpg",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 0,
+              "offset_max": 2
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:spear_stone_rpg",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 0,
+              "offset_max": 2
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:bow_stone_rpg",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 0,
+              "offset_max": 2
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:crossbow_stone_rpg",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 0,
+              "offset_max": 2
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:sword_iron_rpg",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 0,
+              "offset_max": 2
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:mace_iron_rpg",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 0,
+              "offset_max": 2
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:spear_iron_rpg",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 0,
+              "offset_max": 2
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:bow_iron_rpg",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 0,
+              "offset_max": 2
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "rpgmod:crossbow_iron_rpg",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "rpgmod:set_rpg_level",
+              "offset_min": 0,
+              "offset_max": 2
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

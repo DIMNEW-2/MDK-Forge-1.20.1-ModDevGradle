@@ -1,0 +1,17 @@
+{
+  "branch": "defense",
+  "x": 2,
+  "y": 2,
+  "cost": 2,
+  "required_level": 12,
+  "parents": [
+    "rpgmod:defense/vitality_2"
+  ],
+  "icon": "minecraft:shield",
+  "effects": [
+    {
+      "type": "flag",
+      "flag": "iron_will"
+    }
+  ]
+}
