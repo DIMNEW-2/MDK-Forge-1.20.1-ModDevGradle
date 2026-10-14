@@ -98,8 +98,8 @@ public final class SkillGraphValidator {
         while (changed) {
             changed = false;
             for (String id : new ArrayList<>(remaining)) {
-                Collection<String> parents = parentsById.getOrDefault(id, List.of());
-                if (parents.isEmpty()) {
+                Collection<String> parents = parentsById.get(id);
+                if (parents == null || parents.isEmpty()) {
                     continue;
                 }
                 boolean supported = false;

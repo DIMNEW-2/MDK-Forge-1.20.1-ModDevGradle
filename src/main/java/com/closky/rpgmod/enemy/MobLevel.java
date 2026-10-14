@@ -53,14 +53,15 @@ public final class MobLevel {
 
     /** Assigns a level to a freshly spawned mob (no-op if already initialised). */
     public static void initialize(Mob mob) {
-        if (!(mob.level() instanceof ServerLevel server) || !RpgConfig.COMMON.mobLevelScaling.get()) {
+        double scaling = RpgConfig.COMMON.mobLevelScaling.get();
+        if (!(mob.level() instanceof ServerLevel server) || scaling <= 0.0D) {
             return;
         }
         MobRpgData data = MobRpgData.get(mob);
         if (data == null || data.isInitialized()) {
             return;
         }
-        int zone = zoneLevel(server, mob.blockPosition());
+        int zone = Math.max(1, (int) Math.round(zoneLevel(server, mob.blockPosition()) * scaling));
         int variance = server.getRandom().nextInt(5) - 2;
         int level = Mth.clamp(zone + variance, 1, RpgConfig.COMMON.maxMobLevel.get());
         if (!(mob instanceof Enemy)) {

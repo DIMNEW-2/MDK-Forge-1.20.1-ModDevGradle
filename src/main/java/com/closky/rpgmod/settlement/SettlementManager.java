@@ -213,7 +213,13 @@ public class SettlementManager extends SavedData {
             return;
         }
         long now = level.getGameTime();
-        int decay = RpgConfig.COMMON.relationDecayRate.get();
+        // relationDecayRate is fractional (0.5 by default): the integer part is applied every step,
+        // the remainder with the matching probability, so the expected drift per step equals the setting
+        double decayRate = RpgConfig.COMMON.relationDecayRate.get();
+        int decay = (int) Math.floor(decayRate);
+        if (random.nextDouble() < decayRate - decay) {
+            decay++;
+        }
         List<Settlement> list = new ArrayList<>(settlements.values());
         for (Settlement s : list) {
             simulateEconomy(s);

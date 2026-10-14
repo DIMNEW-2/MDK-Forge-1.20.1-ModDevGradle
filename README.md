@@ -51,11 +51,12 @@
 | `tools/gen_templates.py` | 56 NBT‑шаблонов подземелий (через `tools/nbtlite.py`), тот же алгоритм, что и Java‑команда `generate_templates`. |
 | `tools/validate_data.py` | Перекрёстная проверка данных: все ссылки на предметы/блоки/модели/текстуры/шаблоны/пулы/ключи локализации. |
 | `tools/check_java.py` | Синтаксис (tree‑sitter) + резолв статических и инстанс‑обращений к классам мода. |
+| `tools/flow_scan.py` | Эвристический поиск ошибок фазы Flow javac (захват не‑effectively‑final локальных переменных в лямбдах, недостижимый код, отсутствующий `return`, непойманные checked‑исключения). |
 
 ```bash
 pip install pillow tree-sitter tree-sitter-java
 python3 tools/gen_textures.py && python3 tools/gen_resources.py && python3 tools/gen_worldgen.py && python3 tools/gen_templates.py
-python3 tools/validate_data.py && python3 tools/check_java.py
+python3 tools/validate_data.py && python3 tools/check_java.py && python3 tools/flow_scan.py
 ```
 
 ## Конфигурация
