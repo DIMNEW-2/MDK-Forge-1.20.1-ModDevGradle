@@ -1,0 +1,17 @@
+{
+  "branch": "fire",
+  "x": 11,
+  "y": 1,
+  "cost": 2,
+  "required_level": 5,
+  "parents": [
+    "rpgmod:fire/kindling"
+  ],
+  "icon": "minecraft:fire_charge",
+  "effects": [
+    {
+      "type": "unlock_spell",
+      "spell": "rpgmod:fire_nova"
+    }
+  ]
+}

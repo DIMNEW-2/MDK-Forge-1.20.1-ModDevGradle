@@ -1,0 +1,14 @@
+{
+  "fallback": "rpgmod:underground_fortress/ends",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "rpgmod:underground_fortress/corridor",
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      }
+    }
+  ]
+}

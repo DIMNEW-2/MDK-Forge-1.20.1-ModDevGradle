@@ -1,0 +1,17 @@
+{
+  "branch": "fire",
+  "x": 12,
+  "y": 1,
+  "cost": 2,
+  "required_level": 8,
+  "parents": [
+    "rpgmod:fire/kindling"
+  ],
+  "icon": "minecraft:magma_cream",
+  "effects": [
+    {
+      "type": "unlock_spell",
+      "spell": "rpgmod:flame_burst"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "rpgmod:bolt_basic",
+    "rpgmod:bolt_fire",
+    "rpgmod:bolt_frost",
+    "rpgmod:bolt_poison",
+    "rpgmod:bolt_piercing",
+    "rpgmod:bolt_lightning"
+  ]
+}

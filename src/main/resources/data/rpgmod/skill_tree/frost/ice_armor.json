@@ -1,0 +1,17 @@
+{
+  "branch": "frost",
+  "x": 14,
+  "y": 1,
+  "cost": 2,
+  "required_level": 8,
+  "parents": [
+    "rpgmod:frost/cold_focus"
+  ],
+  "icon": "minecraft:blue_ice",
+  "effects": [
+    {
+      "type": "unlock_spell",
+      "spell": "rpgmod:ice_armor"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "branch": "fire",
+  "x": 11,
+  "y": 0,
+  "cost": 1,
+  "required_level": 3,
+  "parents": [],
+  "icon": "minecraft:blaze_powder",
+  "effects": [
+    {
+      "type": "spell_power",
+      "school": "fire",
+      "amount": 0.05
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "AXA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "rpgmod:arrow_basic"
+    },
+    "X": {
+      "item": "minecraft:blaze_powder"
+    }
+  },
+  "result": {
+    "item": "rpgmod:arrow_fire",
+    "count": 8
+  }
+}

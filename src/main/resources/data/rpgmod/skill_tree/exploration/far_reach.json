@@ -1,0 +1,19 @@
+{
+  "branch": "exploration",
+  "x": 7,
+  "y": 2,
+  "cost": 1,
+  "required_level": 12,
+  "parents": [
+    "rpgmod:exploration/mountaineer"
+  ],
+  "icon": "minecraft:fishing_rod",
+  "effects": [
+    {
+      "type": "attribute",
+      "attribute": "forge:block_reach",
+      "amount": 1,
+      "operation": "addition"
+    }
+  ]
+}

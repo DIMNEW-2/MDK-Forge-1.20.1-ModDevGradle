@@ -1,0 +1,17 @@
+{
+  "branch": "nature",
+  "x": 17,
+  "y": 0,
+  "cost": 1,
+  "required_level": 3,
+  "parents": [],
+  "icon": "minecraft:oak_sapling",
+  "effects": [
+    {
+      "type": "attribute",
+      "attribute": "rpgmod:healing_power",
+      "amount": 0.1,
+      "operation": "addition"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "rpgmod:block/boss_spawner_top",
+    "bottom": "rpgmod:block/boss_spawner_side",
+    "side": "rpgmod:block/boss_spawner_side"
+  }
+}

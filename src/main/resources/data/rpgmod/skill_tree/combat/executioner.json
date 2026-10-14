@@ -1,0 +1,17 @@
+{
+  "branch": "combat",
+  "x": 0,
+  "y": 2,
+  "cost": 2,
+  "required_level": 10,
+  "parents": [
+    "rpgmod:combat/strength_2"
+  ],
+  "icon": "minecraft:netherite_axe",
+  "effects": [
+    {
+      "type": "flag",
+      "flag": "executioner"
+    }
+  ]
+}

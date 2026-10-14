@@ -1,0 +1,19 @@
+{
+  "branch": "arcane",
+  "x": 19,
+  "y": 1,
+  "cost": 1,
+  "required_level": 6,
+  "parents": [
+    "rpgmod:arcane/mana_well"
+  ],
+  "icon": "minecraft:glass_bottle",
+  "effects": [
+    {
+      "type": "attribute",
+      "attribute": "rpgmod:mana_regen",
+      "amount": 1,
+      "operation": "addition"
+    }
+  ]
+}

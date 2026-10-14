@@ -1,0 +1,17 @@
+{
+  "branch": "lightning",
+  "x": 15,
+  "y": 3,
+  "cost": 2,
+  "required_level": 15,
+  "parents": [
+    "rpgmod:lightning/chain_lightning"
+  ],
+  "icon": "minecraft:trident",
+  "effects": [
+    {
+      "type": "cooldown",
+      "amount": 0.1
+    }
+  ]
+}

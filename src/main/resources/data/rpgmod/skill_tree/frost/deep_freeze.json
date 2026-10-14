@@ -1,0 +1,17 @@
+{
+  "branch": "frost",
+  "x": 14,
+  "y": 2,
+  "cost": 2,
+  "required_level": 14,
+  "parents": [
+    "rpgmod:frost/ice_armor"
+  ],
+  "icon": "minecraft:ice",
+  "effects": [
+    {
+      "type": "mana_cost",
+      "amount": 0.1
+    }
+  ]
+}

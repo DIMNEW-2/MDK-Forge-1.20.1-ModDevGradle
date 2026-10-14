@@ -1,0 +1,19 @@
+{
+  "branch": "defense",
+  "x": 2,
+  "y": 1,
+  "cost": 1,
+  "required_level": 5,
+  "parents": [
+    "rpgmod:defense/vitality_1"
+  ],
+  "icon": "minecraft:golden_apple",
+  "effects": [
+    {
+      "type": "attribute",
+      "attribute": "minecraft:generic.max_health",
+      "amount": 2,
+      "operation": "addition"
+    }
+  ]
+}

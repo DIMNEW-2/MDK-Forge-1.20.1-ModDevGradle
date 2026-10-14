@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "rpgmod:catacombs_basic",
+    "rpgmod:bandit_camp",
+    "rpgmod:deep_mines",
+    "rpgmod:abandoned_manor",
+    "rpgmod:labyrinth_basic",
+    "rpgmod:underground_fortress",
+    "rpgmod:ruined_castle",
+    "rpgmod:arcane_tower"
+  ]
+}

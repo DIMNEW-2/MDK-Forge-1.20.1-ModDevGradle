@@ -1,0 +1,17 @@
+{
+  "branch": "lightning",
+  "x": 15,
+  "y": 1,
+  "cost": 2,
+  "required_level": 5,
+  "parents": [
+    "rpgmod:lightning/quick_mind"
+  ],
+  "icon": "minecraft:copper_ingot",
+  "effects": [
+    {
+      "type": "unlock_spell",
+      "spell": "rpgmod:lightning_bolt"
+    }
+  ]
+}

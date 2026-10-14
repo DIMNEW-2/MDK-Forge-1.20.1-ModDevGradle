@@ -1,0 +1,16 @@
+{
+  "type": "rpgmod:dungeon",
+  "biomes": "#rpgmod:has_structure/bandit_camp",
+  "step": "surface_structures",
+  "spawn_overrides": {},
+  "terrain_adaptation": "beard_thin",
+  "start_pool": "rpgmod:bandit_camp/start",
+  "size": 7,
+  "max_distance_from_center": 96,
+  "underground": false,
+  "min_depth_below_surface": 14,
+  "start_height": {
+    "absolute": 0
+  },
+  "project_start_to_heightmap": "WORLD_SURFACE_WG"
+}

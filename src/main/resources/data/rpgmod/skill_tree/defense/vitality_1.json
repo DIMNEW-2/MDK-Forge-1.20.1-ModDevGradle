@@ -1,0 +1,17 @@
+{
+  "branch": "defense",
+  "x": 2,
+  "y": 0,
+  "cost": 1,
+  "required_level": 2,
+  "parents": [],
+  "icon": "minecraft:apple",
+  "effects": [
+    {
+      "type": "attribute",
+      "attribute": "minecraft:generic.max_health",
+      "amount": 2,
+      "operation": "addition"
+    }
+  ]
+}

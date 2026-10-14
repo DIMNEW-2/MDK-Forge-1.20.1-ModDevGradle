@@ -1,0 +1,14 @@
+{
+  "fallback": "rpgmod:catacombs_basic/ends",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "rpgmod:catacombs_basic/boss_room",
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      }
+    }
+  ]
+}

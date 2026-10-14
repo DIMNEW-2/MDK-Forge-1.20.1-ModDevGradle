@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "rpgmod:block/loot_chest_boss"
+    },
+    "facing=east": {
+      "model": "rpgmod:block/loot_chest_boss",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "rpgmod:block/loot_chest_boss",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "rpgmod:block/loot_chest_boss",
+      "y": 270
+    }
+  }
+}

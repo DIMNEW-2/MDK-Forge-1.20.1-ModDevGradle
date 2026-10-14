@@ -1,0 +1,15 @@
+{
+  "branch": "lightning",
+  "x": 15,
+  "y": 0,
+  "cost": 1,
+  "required_level": 3,
+  "parents": [],
+  "icon": "minecraft:lightning_rod",
+  "effects": [
+    {
+      "type": "cooldown",
+      "amount": 0.05
+    }
+  ]
+}

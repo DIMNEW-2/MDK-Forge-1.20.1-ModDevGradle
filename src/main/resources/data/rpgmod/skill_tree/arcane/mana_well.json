@@ -1,0 +1,17 @@
+{
+  "branch": "arcane",
+  "x": 19,
+  "y": 0,
+  "cost": 1,
+  "required_level": 3,
+  "parents": [],
+  "icon": "minecraft:amethyst_shard",
+  "effects": [
+    {
+      "type": "attribute",
+      "attribute": "rpgmod:max_mana",
+      "amount": 15,
+      "operation": "addition"
+    }
+  ]
+}

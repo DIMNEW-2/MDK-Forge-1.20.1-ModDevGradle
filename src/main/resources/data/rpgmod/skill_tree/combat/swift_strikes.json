@@ -1,0 +1,19 @@
+{
+  "branch": "combat",
+  "x": 1,
+  "y": 1,
+  "cost": 1,
+  "required_level": 6,
+  "parents": [
+    "rpgmod:combat/strength_1"
+  ],
+  "icon": "minecraft:feather",
+  "effects": [
+    {
+      "type": "attribute",
+      "attribute": "minecraft:generic.attack_speed",
+      "amount": 0.1,
+      "operation": "multiply_base"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "branch": "fire",
+  "x": 11,
+  "y": 2,
+  "cost": 3,
+  "required_level": 12,
+  "parents": [
+    "rpgmod:fire/fire_nova"
+  ],
+  "icon": "minecraft:lava_bucket",
+  "effects": [
+    {
+      "type": "unlock_spell",
+      "spell": "rpgmod:inferno"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "branch": "exploration",
+  "x": 7,
+  "y": 1,
+  "cost": 1,
+  "required_level": 8,
+  "parents": [
+    "rpgmod:exploration/fleet_foot"
+  ],
+  "icon": "minecraft:stone",
+  "effects": [
+    {
+      "type": "attribute",
+      "attribute": "forge:step_height_addition",
+      "amount": 0.5,
+      "operation": "addition"
+    }
+  ]
+}

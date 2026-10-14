@@ -1,0 +1,17 @@
+{
+  "branch": "nature",
+  "x": 17,
+  "y": 2,
+  "cost": 2,
+  "required_level": 6,
+  "parents": [
+    "rpgmod:nature/thorn_bolt"
+  ],
+  "icon": "minecraft:glow_berries",
+  "effects": [
+    {
+      "type": "unlock_spell",
+      "spell": "rpgmod:regrowth"
+    }
+  ]
+}

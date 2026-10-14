@@ -1,0 +1,6 @@
+{
+  "parent": "rpgmod:item/bow_iron_rpg",
+  "textures": {
+    "layer0": "rpgmod:item/bow_iron_rpg_pulling_1"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "branch": "frost",
+  "x": 13,
+  "y": 0,
+  "cost": 1,
+  "required_level": 3,
+  "parents": [],
+  "icon": "minecraft:snowball",
+  "effects": [
+    {
+      "type": "mana_cost",
+      "amount": 0.05
+    }
+  ]
+}

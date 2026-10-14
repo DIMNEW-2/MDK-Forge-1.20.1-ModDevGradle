@@ -1,0 +1,17 @@
+{
+  "branch": "nature",
+  "x": 18,
+  "y": 2,
+  "cost": 2,
+  "required_level": 8,
+  "parents": [
+    "rpgmod:nature/entangle"
+  ],
+  "icon": "minecraft:oak_log",
+  "effects": [
+    {
+      "type": "unlock_spell",
+      "spell": "rpgmod:bark_skin"
+    }
+  ]
+}

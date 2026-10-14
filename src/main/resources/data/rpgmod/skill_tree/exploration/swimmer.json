@@ -1,0 +1,19 @@
+{
+  "branch": "exploration",
+  "x": 7,
+  "y": 3,
+  "cost": 1,
+  "required_level": 10,
+  "parents": [
+    "rpgmod:exploration/far_reach"
+  ],
+  "icon": "minecraft:cod",
+  "effects": [
+    {
+      "type": "attribute",
+      "attribute": "forge:swim_speed",
+      "amount": 0.3,
+      "operation": "multiply_base"
+    }
+  ]
+}

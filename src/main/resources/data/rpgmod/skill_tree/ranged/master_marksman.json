@@ -1,0 +1,19 @@
+{
+  "branch": "ranged",
+  "x": 4,
+  "y": 3,
+  "cost": 3,
+  "required_level": 16,
+  "parents": [
+    "rpgmod:ranged/piercing_focus"
+  ],
+  "icon": "minecraft:spectral_arrow",
+  "effects": [
+    {
+      "type": "attribute",
+      "attribute": "rpgmod:ranged_damage",
+      "amount": 0.15,
+      "operation": "addition"
+    }
+  ]
+}
