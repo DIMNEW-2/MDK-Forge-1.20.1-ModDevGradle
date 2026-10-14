@@ -60,6 +60,7 @@ public class RpgMod {
         ModLootFunctions.LOOT_FUNCTIONS.register(modBus);
         ModSpells.SPELLS.register(modBus);
         ModStructures.STRUCTURE_TYPES.register(modBus);
+        ModStructures.STRUCTURE_PIECES.register(modBus);
         ModCreativeTabs.TABS.register(modBus);
 
         modBus.addListener(this::commonSetup);

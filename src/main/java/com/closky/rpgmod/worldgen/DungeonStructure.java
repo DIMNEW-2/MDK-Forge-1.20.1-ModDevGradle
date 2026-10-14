@@ -1,6 +1,7 @@
 package com.closky.rpgmod.worldgen;
 
 import com.closky.rpgmod.registry.ModStructures;
+import com.mojang.datafixers.util.Either;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
@@ -11,11 +12,15 @@ import net.minecraft.world.level.NoiseColumn;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.levelgen.WorldGenerationContext;
 import net.minecraft.world.level.levelgen.heightproviders.HeightProvider;
+import net.minecraft.world.level.levelgen.structure.BoundingBox;
 import net.minecraft.world.level.levelgen.structure.Structure;
+import net.minecraft.world.level.levelgen.structure.StructurePiece;
 import net.minecraft.world.level.levelgen.structure.StructureType;
+import net.minecraft.world.level.levelgen.structure.pieces.StructurePiecesBuilder;
 import net.minecraft.world.level.levelgen.structure.pools.JigsawPlacement;
 import net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool;
 
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -83,7 +88,38 @@ public class DungeonStructure extends Structure {
             }
         }
         BlockPos pos = new BlockPos(x, y, z);
-        return JigsawPlacement.addPieces(context, startPool, startJigsawName, size, pos, false, projectStartToHeightmap, maxDistanceFromCenter);
+        Optional<GenerationStub> stub = JigsawPlacement.addPieces(context, startPool, startJigsawName, size, pos, false, projectStartToHeightmap, maxDistanceFromCenter);
+        if (!underground || stub.isEmpty()) {
+            return stub;
+        }
+        // underground dungeons get a staircase from the start room up to the surface (plan 4.2)
+        GenerationStub inner = stub.get();
+        StructurePiecesBuilder builder = inner.getPiecesBuilder();
+        List<StructurePiece> pieces = builder.build().pieces();
+        if (pieces.isEmpty()) {
+            return Optional.of(new GenerationStub(inner.position(), Either.right(builder)));
+        }
+        BoundingBox room = pieces.get(0).getBoundingBox();
+        int centerX = (room.minX() + room.maxX()) / 2;
+        int centerZ = (room.minZ() + room.maxZ()) / 2;
+        // OCEAN_FLOOR_WG ignores water, so the block right above the ground tells whether the spot is flooded
+        int surfaceAtCenter = context.chunkGenerator().getFirstOccupiedHeight(centerX, centerZ, Heightmap.Types.OCEAN_FLOOR_WG,
+                context.heightAccessor(), context.randomState());
+        NoiseColumn column = context.chunkGenerator().getBaseColumn(centerX, centerZ, context.heightAccessor(), context.randomState());
+        if (!column.getBlock(surfaceAtCenter + 1).getFluidState().isEmpty()) {
+            return Optional.empty(); // no entrances under lakes and oceans
+        }
+        if (surfaceAtCenter > room.maxY() + 2) {
+            builder.addPiece(new EntranceShaftPiece(centerX, centerZ, room.minY() + 1, room.maxY(), surfaceAtCenter, dungeonId()));
+        }
+        return Optional.of(new GenerationStub(inner.position(), Either.right(builder)));
+    }
+
+    /** Dungeon id derived from the start pool ({@code rpgmod:<id>/start}). */
+    private String dungeonId() {
+        String path = startPool.unwrapKey().map(key -> key.location().getPath()).orElse("");
+        int slash = path.indexOf('/');
+        return slash > 0 ? path.substring(0, slash) : path;
     }
 
     @Override
